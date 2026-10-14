@@ -1175,9 +1175,12 @@ html, body {
   transform: rotate(45deg) translate(-1px, -1px);
 }
 
-.task-details {
+.task-details,
+.task-content {
   flex: 1;
   min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .task-title {
@@ -1525,6 +1528,30 @@ html, body {
    Mobile Bottom Bar & FAB - Bulletproof Dimensions
    ======================================================== */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Natural mobile scaling to eliminate 'too zoomed in' feel */
+  }
+
+  body,
+  .app-container,
+  .app-viewport {
+    overflow-x: auto !important;
+  }
+
+  .app-main-content {
+    padding: 12px 12px calc(76px + env(safe-area-inset-bottom, 12px)) !important;
+    overflow-x: auto !important; /* Allow smooth horizontal scroll */
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .app-header {
+    padding: 10px 14px 8px !important;
+  }
+
+  .header-greeting {
+    font-size: 19px !important;
+  }
+
   .desktop-sidebar {
     display: none !important;
   }
