@@ -1,0 +1,17 @@
+{
+  "name": "LifeOS — Personal Growth & Life Manager",
+  "short_name": "LifeOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#18181B",
+  "description": "Your personal command center for daily productivity, habits, finances, schedule, and self-development.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
