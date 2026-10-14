@@ -512,13 +512,21 @@ html, body {
 /* Laptop 2-Column Responsive Dashboard Grids */
 .desktop-grid-2col {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 100%;
   gap: 16px;
+}
+
+.desktop-col {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 860px) {
   .desktop-grid-2col {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: 20px;
   }
 }
@@ -531,6 +539,8 @@ html, body {
   padding: 16px;
   margin-bottom: 16px;
   box-shadow: var(--shadow-card);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 769px) {
