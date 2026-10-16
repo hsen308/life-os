@@ -27,3 +27,6 @@ dist-ssr
 .env.local
 
 .vercel
+agent-reach-temp
+1.html
+supabase/.temp/
